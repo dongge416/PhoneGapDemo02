@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title></title>
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+      <script type="text/javascript" charset="utf-8" src="main.js"></script>
+
+    <script>
+      function startActivity(className) {
+          cordova.exec(function() {console.log("Success");}, function(e) {console.log("Error: "+e);}, "Activity", "start", [className]);
+      };
+      
+      localStorage.lifecyclestatus = "";
+      localStorage.backgroundstatus = "";
+      </script>
+
+
+</head>
+<body onload="init();" id="stage" class="theme">
+
+
+ <h1>Cordova Android Tests</h1>
+    <div id="info">
+        <h4>Platform: <span id="platform"> &nbsp;</span>,   Version: <span id="version">&nbsp;</span></h4>
+        <h4>UUID: <span id="uuid"> &nbsp;</span>,   Name: <span id="name">&nbsp;</span></h4>
+        <h4>Width: <span id="width"> &nbsp;</span>,   Height: <span id="height">&nbsp;
+                   </span>, Color Depth: <span id="colorDepth"></span></h4>
+        <h4>Cordova Version: <span id="cordova">&nbsp;</span></h4>
+     </div>
+    <div id="info">
+        <h4>Run each of the test activities below:</h4>
+    </div>
+
+<h1>One</h1>
+    <button class="btn large" onclick="startActivity('com.example.phonegapdemo02.MainActivity02');">点击</button>
+    <button class="btn large" onclick="startActivity('com.example.phonegapdemo02.MainActivity03');">点击3</button>
+    <button class="btn large" onclick="startActivity('com.example.phonegapdemo02.backbuttonmultipage');">点击2</button>
+    <button class="btn large" onclick="startActivity('com.example.phonegapdemo02.MainActivity04');">wei</button>
+</body>
+</html>
